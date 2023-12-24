@@ -4,6 +4,7 @@ Cần biết thêm chi tiết liên hệ:
 Zalo: 0909-600-144
 Facebook:https://www.facebook.com/kemuts1
 Cảm ơn bạn đã ghé page của tôi!
+=
 
 1.Danh sách biểu đồ Usecase
 1.1	Biểu đồ Usecase tổng quát
@@ -120,6 +121,52 @@ Khách hàng có thể xem chi tiết hơn về sản phẩm mình mong muốn.
 -
 Giỏ hàng là trang lưu trữ các sản phẩm mà khách hàng đã chọn mua
 ![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/71e214b0-f897-4647-a00e-7efb681155aa)
+
+-Trạng thái giao hàng
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/fbc93ea0-37ec-4fd5-81a2-90117befffd3)
+-
+
+1.6.	Trang đăng nhập
+-
+Khách hàng muốn Thanh toán để mua sản phẩm thì phải đăng nhập vào websites. Thông tin đăng nhập bao gồm tên email và mật khẩu. Nếu chưa có tài khoản bạn hãy nhấn vào đăng kí.
+
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/cddf2ef7-5c4f-41a1-b09a-233d63802652)
+
+1.7.	Trang đăng ký
+-
+Để đăng kí tài khoản khách hàng phải nhập đầy đủ thông tin tài khoản và nhấn vào đăng kí để hoàn thành đăng kí tài khoản
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/edccbcd9-ecdd-436e-9e38-a42fe279b21c)
+
+2.	Giao diện cho Admin
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/94d37a4b-5e34-403e-ac21-a79d88e12a0c)
+
+
+
+
+2.2.	Quản lý tài khoản
+-
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/35c97736-5660-49dd-8c3f-f59f105c4140)
+
+
+2.3.	Trang Danh Mục
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/0b85763a-6d50-45f4-b432-23de6687875e)
+-
+
+
+2.4.	Trang sản phẩm
+-
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/4bc94aa5-0957-45a4-88f1-4c038bbe20c5)
+
+2.5.	Trang đơn hàng
+-
+![image](https://github.com/Doanthuat/Banhang_sach/assets/95136439/a19e922a-92db-459f-bf42-5bcfdd39eee2)
+
+
+
+
+
+
+
 
 
 
