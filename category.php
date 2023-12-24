@@ -38,7 +38,7 @@
 </head>
 <style>
 .header_bg {
-    background-color: #ecfdff;
+    background-color: #fff;
     height: 230px;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,6 +59,36 @@
     box-shadow:0px 10px 20px 0px rgb(201 255 117 / 42%) ;
     
 }
+.p_filter_widgets .list li a::before {
+    content: "";
+    width: 100px;
+    height: 20px;
+    background-color: red;
+}
+
+.col-lg-3 {
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 0; */
+}
+.col-lg-9 {
+    padding-left: 60px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    
+    
+}
+.col-lg-3::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    right: 0;
+    top: 0;
+    
+}
+.container {
+   padding:0;
+}
+
 </style>
 
 <body>
@@ -67,7 +97,7 @@
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg" style="background-color: transparent;">
         <div class="container">
             <div class="row a2">
                 <div class="col-lg-8 a2" style="
@@ -85,14 +115,19 @@
   <!-- breadcrumb end-->
 
     <!--================Category Product Area =================-->
-    <section class="cat_product_area " style="    background-image: linear-gradient(45deg, #85ffbd38 0%, #fffb7d42 100%);">
+    <section class="cat_product_area "
+     style="  
+       background-image: linear-gradient(45deg, #85ffbd38 0%, #fffb7d42 100%);
+       width: 1200px;
+         margin-left: auto;
+         margin-right: auto;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets p_filter_widgets">
                             <div class="l_w_title">
-                                <h3>Danh Mục Sản Phẩm</h3>
+                                <h3 style="font-weight:800;">Danh Mục Sản Phẩm</h3>
                             </div>
                             <div class="widgets_inner">
                                 <ul class="list">
@@ -278,7 +313,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="section_tittle text-center">
-                        <h3>Sản Phẩm HOT</h3>
+                        <h3 style="padding-top:30px">Sản Phẩm HOT</h3>
                     </div>
                 </div>
             </div>

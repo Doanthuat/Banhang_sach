@@ -30,13 +30,16 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&family=Poppins:ital,wght@0,200;0,500;1,300&display=swap" rel="stylesheet">
 </head>
 <style>
 * {
     font-family: 'Poppins';
 }
 html {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
     .btn_2,
 .form-contact .form-group .btn_1 i {
@@ -70,7 +73,11 @@ html {
     <?php include 'header.php';?>
 
     <!-- banner part start-->
-    <section class="banner_part">
+    <section class="banner_part "
+     style=" background: url('./img/banner/banner_books.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -316px 0;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -85,8 +92,9 @@ html {
                                         <div class="banner_text_iner">
                                             <h1 class="addfont" style="text-transform: none;"><?= $item['ten'] ?></h1>
                                             <p><?= $item['mota'] ?></p>
-                                            <a href="<?= $item['link'] ?>" class="btn_2">mua ngay</a>
+                                            <a href="<?= $item['link'] ?>" class="btn_2">Xem ngay</a>
                                         </div>
+                                
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
@@ -106,7 +114,7 @@ html {
     </section>
     <!-- banner part start-->
 
-    <!-- feature_part start-->
+    <!-- feature_part start -->
     <section class="feature_part padding_top">
         <div class="container">
             <div class="row ">
@@ -148,7 +156,7 @@ html {
         </div>
     </section>
 
-    <!-- product_list part start-->
+    <!-- product_list part start -->
     <section class="product_list best_seller">
         <div class="container">
             <div class="row justify-content-center">

@@ -9,9 +9,13 @@
             position: fixed;
             /* background: red; */
             background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+            box-shadow: rgb(150 183 122 / 57%) 0px 3px 8px;
         }
         .main_menu .main-menu-item ul li .nav-link {
+            display:flex;
             color: #000;
+            min-width: 114px;
+            justify-content: center;
         }
         .main_menu .main-menu-item ul li .nav-link:hover {
             color: #000;
@@ -62,7 +66,7 @@
             <div class="row align-items-center" >
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light" style="width: 90vw; height: 150px;" >
-                        <a class="navbar-brand" style=" margin-left: 50px; " href="index.php"> <img src="img/slide/LOGO-SACH-2017-01-1.png" alt="logo" style="height: 100px;"> </a>
+                        <a class="navbar-brand" style=" margin-left: 50px; " href="index.php"> <img src="img/slide/LOGO-SACH-2017-01-1.png" alt="logo" style="height: 100px;max-width:none; "> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="menu_icon"><i class="fas fa-bars"></i></span>
                         </button>
@@ -81,6 +85,13 @@
                                     }
                                     .hovertaikhoan:hover {
                                         background-color: #fff;
+                                        opacity: 0.5;
+                                        
+                                    }
+                                    .dropdown-item:hover {
+                                        background-color: #fff;
+                                        /* font-weight: 700; */
+                                        
                                         opacity: 0.5;
                                     }
                                 </style>
@@ -157,8 +168,8 @@
                                             tài khoản
                                         </a>
                                         <div class="dropdown-menu" style="padding: 0;" aria-labelledby="navbarDropdown_2">
-                                            <a class="dropdown-item" href="register.php"> đăng ký</a>
-                                            <a class="dropdown-item" href="login.php">đăng nhập</a>
+                                            <a class="dropdown-item" href="register.php" style="color:#000 !important;"> đăng ký</a>
+                                            <a class="dropdown-item" href="login.php" style="color:#000 !important;" >đăng nhập</a>
                                         </div>
                                     </li>
                                 <?php

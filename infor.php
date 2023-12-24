@@ -56,7 +56,7 @@
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg"style="background-color: transparent;">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-8 a2">

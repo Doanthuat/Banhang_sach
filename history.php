@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/nice-select.css">
   <!-- font awesome CSS -->
   <link rel="stylesheet" href="css/all.css">
+  <!-- font Poppins CSS -->
+  <link rel="stylesheet" href="./admin/assets/fonts/stylesheet.css">
   <!-- flaticon CSS -->
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/themify-icons.css">
@@ -32,8 +34,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
+    html {
+        font-family: 'Poppins';
+    }
 .header_bg {
-    background-color: #ecfdff;
+    background-color: #fff;
     height: 230px;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +63,7 @@
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg " style="background-color: transparent;">
         <div class="container">
             <div class="row justify-content-center a2">
                 <div class="col-lg-8 a2">

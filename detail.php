@@ -54,7 +54,7 @@ if (isset($_GET["id"])) {
 </head>
 <style>
 .header_bg {
-    background-color: #ecfdff;
+    background-color: #fff;
     height: 230px;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@ if (isset($_GET["id"])) {
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg" style="background-color: transparent;">
         <div class="container">
             <div class="row  a2">
                 <div class="col-lg-8 a2">
@@ -170,45 +170,62 @@ if (isset($_GET["id"])) {
                                             } -->
 
 
-                                        <?php 
-                                            if (isset($_POST["addcart"])) {
-                                                if (isset($_COOKIE["user"])) {
-                                                    $taikhoan = $_COOKIE["user"];
-                                                    $soluong = $_POST["soluong"];
-                                                    $giatien = $_POST["giatien"];
-                                                    foreach (selectAll("SELECT * FROM `taikhoan` WHERE taikhoan='$taikhoan'") as $item) {
-                                                        $id_nguoidung = $item['id'];
-                                                    }
-                                                    if (rowCount("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung")>0) {
-                                                        foreach (selectAll("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung") as $item) {
-                                                            $idDhcu= $item['id'];
-                                                        }
-                                                        if (rowCount("SELECT * FROM ctdonhang WHERE id_donhang = $idDhcu && id_sanpham = $idSanpham")>0) {
-                                                            selectAll("UPDATE ctdonhang SET soluong= $soluong+soluong WHERE id_donhang = $idDhcu && id_sanpham = $idSanpham");
-                                                        }else{
-                                                            selectAll("INSERT INTO ctdonhang VALUES(null,$idDhcu,$idSanpham,$soluong,$giatien)");
-                                                        }
-                                                    }else{
-                                                        selectAll("INSERT INTO donhang VALUES(null,$id_nguoidung,0,0,null,null)");
-                                                        foreach (selectAll("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung") as $item) {
-                                                            $idDhmoi= $item['id'];
-                                                        }
-                                                        selectAll("INSERT INTO ctdonhang VALUES(null,$idDhmoi,$idSanpham,$soluong,$giatien)");
-                                                    }
-                                                    
-                                                    echo "<meta http-equiv='refresh' content='0'>";
-                                                }else{
-                                                    echo "<script>alert('Vui lòng đăng nhập để mua hàng coiii')</script>";
-                                                }
-                                            }
-                                        ?>
-                                        <input class="btn_3" name="addcart" type="submit" value="Thêm vào giỏ hàng"
-                                        style="    box-shadow: -1.717px 8.835px 29.76px 2.24px #e9f5e8;
-                                                     border: 1px solid #00ff0085;
-                                                     background-color: #85FFBD;
-                                                     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);"
-                                        
-                                        />
+                                       <?php
+if (isset($_POST["addcart"])) {
+    // Kiểm tra xem có thông tin người dùng trong cookie không
+    if (isset($_COOKIE["user"])) {
+        $taikhoan = $_COOKIE["user"];
+        $soluong = $_POST["soluong"];
+        $giatien = $_POST["giatien"];
+
+        foreach (selectAll("SELECT * FROM `taikhoan` WHERE taikhoan='$taikhoan'") as $item) {
+            $id_nguoidung = $item['id'];
+        }
+
+        if (rowCount("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung") > 0) {
+            foreach (selectAll("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung") as $item) {
+                $idDhcu = $item['id'];
+            }
+            if (rowCount("SELECT * FROM ctdonhang WHERE id_donhang = $idDhcu && id_sanpham = $idSanpham") > 0) {
+                selectAll("UPDATE ctdonhang SET soluong= $soluong+soluong WHERE id_donhang = $idDhcu && id_sanpham = $idSanpham");
+            } else {
+                selectAll("INSERT INTO ctdonhang VALUES(null,$idDhcu,$idSanpham,$soluong,$giatien)");
+            }
+        } else {
+            selectAll("INSERT INTO donhang VALUES(null,$id_nguoidung,0,0,null,null)");
+            foreach (selectAll("SELECT * FROM donhang WHERE status=0 && id_taikhoan=$id_nguoidung") as $item) {
+                $idDhmoi = $item['id'];
+            }
+            selectAll("INSERT INTO ctdonhang VALUES(null,$idDhmoi,$idSanpham,$soluong,$giatien)");
+        }
+
+        echo "<meta http-equiv='refresh' content='0'>";
+    } elseif (isset($_SESSION["user"])) {
+        // Nếu không có cookie, kiểm tra xem có thông tin người dùng trong session không
+        $taikhoan = $_SESSION["user"];
+        $soluong = $_POST["soluong"];
+        $giatien = $_POST["giatien"];
+
+        foreach (selectAll("SELECT * FROM `taikhoan` WHERE taikhoan='$taikhoan'") as $item) {
+            $id_nguoidung = $item['id'];
+        }
+
+        // Tiếp tục xử lý giỏ hàng tương tự như khi có cookie
+        // ...
+
+        echo "<meta http-equiv='refresh' content='0'>";
+    } else {
+        echo "<script>alert('Vui lòng đăng nhập để mua hàng coiii')</script>";
+    }
+}
+?>
+<input class="btn_3" name="addcart" type="submit" value="Thêm vào giỏ hàng"
+style="    box-shadow: -1.717px 8.835px 29.76px 2.24px #e9f5e8;
+            border: 1px solid #00ff0085;
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);"
+/>
+
                                     </form>
                                 </div>
                             </div>

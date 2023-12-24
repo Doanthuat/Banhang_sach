@@ -2646,6 +2646,7 @@ ul {
     text-transform: capitalize;
     line-height: 12px;
     font-weight: 400;
+    min-width: 114px;
 }
 
 
@@ -2843,7 +2844,7 @@ ul {
 .dropdown .dropdown-menu .dropdown-item {
     font-size: 14px;
     padding: 8px 20px !important;
-    color: #fff !important;
+    color: #000 !important;
     background-color: #ff3368;
     text-transform: capitalize;
 }

@@ -33,7 +33,7 @@
 </head>
 <style>
 .header_bg {
-    background-color: #ecfdff;
+    background-color: #fff;
     height: 230px;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg" style="background-color: transparent;">
         <div class="container">
             <div class="row justify-content-center a2" style="
                 display: flex;

@@ -64,7 +64,7 @@
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
-  <section class="breadcrumb header_bg">
+  <section class="breadcrumb header_bg" style="background-color: transparent;">
         <div class="container">
             <div class="row justify-content-center a2">
                 <div class="col-lg-8 a2">

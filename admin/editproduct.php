@@ -112,12 +112,12 @@
                       </div>
 
                       <div class="form-group addfont">
-                        <label for="exampleInputName1">bảo hành</label>
+                        <label for="exampleInputName1">Mã Sách</label>
                         <input type="text" value="<?= $baohanh ?>" name ="baohanh" required class="form-control text-light" placeholder="Nhập ...">
                       </div>
 
                       <div class="form-group addfont">
-                        <label for="exampleInputName1">Xuất xứ</label>
+                        <label for="exampleInputName1">Số Lượng</label>
                         <input type="text" value="<?= $xuatxu ?>" name ="xuatxu" required class="form-control text-light" placeholder="Nhập ...">
                       </div>
 

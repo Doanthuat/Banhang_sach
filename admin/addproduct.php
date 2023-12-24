@@ -92,12 +92,12 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="exampleInputName1">Bảo hành</label>
+                        <label for="exampleInputName1">Mã Sách (Chỉ Nhập Số)</label>
                         <input type="text" name ="baohanh" required class="form-control text-light" placeholder="Nhập ...">
                       </div>
 
                       <div class="form-group">
-                        <label for="exampleInputName1">Xuất xứ</label>
+                        <label for="exampleInputName1">Số Lượng (Chỉ Nhập Số) </label>
                         <input type="text" name ="xuatxu" required class="form-control text-light" placeholder="Nhập ...">
                       </div>
 

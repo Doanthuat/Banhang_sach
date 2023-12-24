@@ -147,7 +147,11 @@
             </ul>
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button addfont" href="../index.php" style="display: none;">Về Trang Chủ</a>
+                <a class="nav-link btn btn-success create-new-button addfont" 
+                  style="    background-color: #000000;
+                              border-color: #000;
+                              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+                href="../index.php" style="display: block;">Về Trang Chủ</a>
               </li>
               <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
